@@ -1,3 +1,13 @@
+drop database if exists awesome;
+
+create database awesome;
+
+use awesome;
+
+create user 'seaha'@'localhost' identified by 'password';
+
+grant select, insert, update, delete on awesome.* to 'seaha'@'localhost';
+
 create table users (
     `id` varchar(50) not null,
     `email` varchar(50) not null,
